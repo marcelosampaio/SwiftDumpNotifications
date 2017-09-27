@@ -10,16 +10,26 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        dumpNotifications()
     }
 
 
+    // MARK: - Notifications Helper
+    func dumpNotifications(){
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(forName: nil, object: nil, queue: nil) { (note) in
+            // completion
+            print("🔥---------------------------------------------🔥")
+            print("➡️ name: \(note.name)")
+//            print("➡️ object: \(String(describing: note.object))")
+
+        }
+    }
+    
+    
 }
 
