@@ -16,14 +16,14 @@ class ViewController: UIViewController {
         
         dumpNotifications()
     }
-
-
+    
+    
     // MARK: - Notifications Helper
     func dumpNotifications(){
         let notificationCenter = NotificationCenter.default
         notificationCenter.addObserver(forName: nil, object: nil, queue: nil) { (note) in
             // completion
-            print("🔥---------------------------------------------🔥")
+            print("🔥-------------------------------------------------🔥")
             print("➡️ name: \(note.name)")
 //            print("➡️ object: \(String(describing: note.object))")
 
